@@ -43,7 +43,7 @@ after_success:
   - cd ./src/NetCoreXunit
   - VAR=$(dotnet test);
     echo $VAR;
-    if [ $VAR contains "Failed: 0." ];
+    if [ $VAR -eq "Failed: 0." ];
     then
       echo "Tests failed";
       exit 1;
