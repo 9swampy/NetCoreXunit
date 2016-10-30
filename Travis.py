@@ -6,6 +6,8 @@ from subprocess import call
 print ("Hello, Python!")
 
 root_directory = os.getcwd()
+print (root_directory)
+
 regexp = re.compile(r'src\\NetCoreXunit.?$')
 result = False
 for child in os.walk(root_directory):
@@ -21,7 +23,7 @@ for child in os.walk(root_directory):
             else:
                 print (test_path + ": All tests passed")
 
-os.chdir(os.path.dirname(__file__))
+os.chdir(root_directory)
 
 if result:
     print ("Failed tests detected")
