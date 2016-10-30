@@ -42,13 +42,13 @@ script:
 after_success:
   # Run tests
   - dotnet test ./src/NetCoreXunit -xml ./out/NetCoreXunit.xml;
-    if ! grep -q ' 0, SKipped' ./out/NetCoreXunit.xml ;  then
+    if ! grep -q ' 0, Skipped' ./out/NetCoreXunit.xml ;  then
       echo 'Failed tests detected.';
     else
       echo 'All tests passed.';
     fi;
   - dotnet test ./src/NetCoreXunitB -xml ./out/NetCoreXunitB.xml;
-    if ! grep -q ' 0, SKipped' ./out/NetCoreXunitB.xml ;  then
+    if ! grep -q ' 0, Skipped' ./out/NetCoreXunitB.xml ;  then
       echo 'Failed tests detected.';
     else
       echo 'All tests passed.';
