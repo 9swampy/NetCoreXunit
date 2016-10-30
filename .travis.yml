@@ -41,8 +41,6 @@ script:
   - dotnet build ./src/NetCoreXunit
   # Build wildcard so it picks up NetCoreXunitB as well
   - dotnet build ./src/**/project.json
-  
-after_success:
   # Run tests
   - dotnet test ./src/NetCoreXunit -xml ./out/NetCoreXunit.xml;
     if grep -q 'result="Fail"' ./out/NetCoreXunit.xml ;  then
@@ -58,5 +56,3 @@ after_success:
     fi;
   - dotnet test -help
   - python Travis.py
-
-  
