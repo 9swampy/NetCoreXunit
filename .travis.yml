@@ -42,10 +42,10 @@ after_success:
   - pushd src/NetCoreXunit && dotnet test && popd
   - cd ./src/NetCoreXunit
   - VAR=$(dotnet test);
-    echo $VAR
-    if [ $VAR contains "Failed: 0." ]
+    echo $VAR;
+    if [ $VAR contains "Failed: 0." ];
     then
-      echo "Tests failed"
+      echo "Tests failed";
       exit 1;
     fi
   - dotnet test -help
