@@ -13,6 +13,7 @@ function Invoke-AppVeyorTest
     }
     if ($result -eq "false")
     {
+        $host.ui.WriteErrorLine("Failed tests detected.")
         exit 1
     }
 }
