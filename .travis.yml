@@ -42,6 +42,7 @@ script:
 after_success:
   # Run tests
   - dotnet test ./src/NetCoreXunit -xml ./out/NetCoreXunit.xml;
+    echo "$(./out/NetCoreXunit.xml)";
     if ! grep -q ' 0, Skipped' ./out/NetCoreXunit.xml ;  then
       echo 'Failed tests detected.';
     else
