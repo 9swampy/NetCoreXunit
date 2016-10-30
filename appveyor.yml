@@ -1,18 +1,9 @@
 version: 1.0.{build}
+install:
+  - ps: Import-Module .\Appveyor.psm1
 before_build:
 - ps: dotnet restore
 build:
   verbosity: minimal
 test_script: 
-- ps: $result = "true"
-Get-ChildItem NetCoreXunit* -Recurse -Directory | % { 
-    $output = & dotnet test $_.FullName
-    if ($output -notcontains "Failed: 0.")
-    {
-      $result = "false"
-    }   
-}
-if ($result -eq "false")
-{
-    exit 1
-}
+- ps: Invoke-AppVeyorTest 
