@@ -13,8 +13,10 @@ result = False
 for child in os.walk(root_directory):
     print (child[0])
     if regexp.search(child[0]) is not None:
+        print ("Matched")
         test_path = os.path.join(root_directory, child[0])
         if os.path.isdir(test_path):
+            print ("IsDir")
             print (test_path)
             os.chdir(test_path)
             call (["dotnet", "test", "-xml", "output.xml"])
