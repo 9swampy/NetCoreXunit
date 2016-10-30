@@ -41,7 +41,7 @@ after_success:
   # Run tests
   - pushd src/NetCoreXunit && dotnet test && popd
   - cd ./src/NetCoreXunit
-  - dotnet test;
+  - dotnet test -json;
     if [ $? -neq 0 ]; then
       echo "Tests failed"
       exit 1;
