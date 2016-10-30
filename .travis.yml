@@ -36,6 +36,8 @@ script:
   # Build projects 
   - dotnet build ./src/NetCore
   - dotnet build ./src/NetCoreXunit
+  # Build wildcard so it picks up NetCoreXunitB as well
+  - dotnet build ./src/**/project.json
   
 after_success:
   # Run tests
