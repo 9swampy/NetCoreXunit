@@ -41,8 +41,8 @@ script:
   
 after_success:
   # Run tests
-  - pushd src && pushd NetCoreXunit && dotnet test && popd && popd
-  - pushd src && pushd NetCoreXunitB && dotnet test && popd && popd
+  - dotnet test ./src/NetCoreXunit
+  - dotnet test ./src/NetCoreXunitB
   - dotnet test -help
 
   
