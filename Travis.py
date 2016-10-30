@@ -8,7 +8,7 @@ print ("Hello, Python!")
 root_directory = os.getcwd()
 print (root_directory)
 
-regexp = re.compile(r'src\\NetCoreXunit.?$')
+regexp = re.compile(r'src[\/\\]NetCoreXunit.?$')
 result = False
 for child in os.walk(root_directory):
     print (child[0])
