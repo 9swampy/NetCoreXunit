@@ -42,6 +42,7 @@ script:
 after_success:
   # Run tests
   - pushd src/NetCoreXunit && dotnet test && popd
+  - dotnet test ./src/**/project.json
   - dotnet test -help
 
   
