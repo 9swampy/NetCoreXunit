@@ -41,8 +41,12 @@ script:
   
 after_success:
   # Run tests
-  - dotnet test ./src/NetCoreXunit
-  - dotnet test ./src/NetCoreXunitB
+  - dotnet test ./src/NetCoreXunit -xml ./out/NetCoreXunit.xml;
+    $pattern = 'Failed' + ':' + ' 0.';
+    if ! fgrep -q $pattern ./out/NetCoreXunit.xml ;  then
+      echo 'Failed tests detected.'
+    fi
+  - dotnet test ./src/NetCoreXunitB -xml ./out/NetCoreXunitB.xml
   - dotnet test -help
 
   
