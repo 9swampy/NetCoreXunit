@@ -13,7 +13,7 @@ addons:
     - libssl-dev
     - libunwind8
     - zlib1g
-	- libicu52
+    - libicu52
     - dbus
 
 before_install:
