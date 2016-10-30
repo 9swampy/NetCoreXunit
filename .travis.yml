@@ -54,5 +54,6 @@ after_success:
       echo 'All tests passed.';
     fi;
   - dotnet test -help
+  - Travis.py
 
   
