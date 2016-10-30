@@ -6,8 +6,8 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>5bd29cef-5eed-4fa5-90b8-3b7fcc73345c</ProjectGuid>
-    <RootNamespace>NetCoreXunit</RootNamespace>
+    <ProjectGuid>75de6ef0-0de9-4534-b165-5dce317d24a4</ProjectGuid>
+    <RootNamespace>NetCore</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
