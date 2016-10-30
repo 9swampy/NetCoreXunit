@@ -3,7 +3,8 @@ import sys
 import re
 from subprocess import call
 
-os.chdir(os.path.dirname(__file__))
+print ("Hello, Python!")
+
 root_directory = os.getcwd()
 regexp = re.compile(r'src\\NetCoreXunit.?$')
 result = False
