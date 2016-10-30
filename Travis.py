@@ -11,6 +11,7 @@ print (root_directory)
 regexp = re.compile(r'src\\NetCoreXunit.?$')
 result = False
 for child in os.walk(root_directory):
+    print (child[0])
     if regexp.search(child[0]) is not None:
         test_path = os.path.join(root_directory, child[0])
         if os.path.isdir(test_path):
