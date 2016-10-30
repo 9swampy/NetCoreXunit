@@ -1,5 +1,8 @@
 language: generic
 
+python:
+  - "2.7"
+
 #dotnet cli require Ubuntu 14.04
 sudo: required
 dist: trusty
@@ -54,6 +57,6 @@ after_success:
       echo 'All tests passed.';
     fi;
   - dotnet test -help
-  - Travis.py
+  - python Travis.py
 
   
