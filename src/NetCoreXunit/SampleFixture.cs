@@ -13,8 +13,9 @@ namespace NetCoreXunit
     {
       Assert.Equal(4, Add(2, 2));
     }
-    
-    [Fact(Skip = "Hardcoded to fail")]
+
+    //[Fact(Skip = "Hardcoded to fail")]
+    [Fact]
     public void FailingTest()
     {
       Assert.Equal(5, Add(2, 2));
