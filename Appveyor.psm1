@@ -8,6 +8,7 @@ function Invoke-AppVeyorTest
         $test_path = $_.FullName
         & dotnet test $test_path
         $output = & dotnet test $test_path
+        Write-Output "Output=$output"
         if ($output -notcontains "Failed: 0.")
         {
             Write-Output "Located failed tests in $test_path"
