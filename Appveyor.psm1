@@ -8,7 +8,7 @@ function Invoke-AppVeyorTest
         $test_path = $_.FullName
         $output = & dotnet test $test_path
         Write-Output $output
-        if ($output.contains(", Failed: 0."))
+        if ($output -Match ", Failed: 0, ")
         {
             Write-Output "All tests passed in $test_path"
         }
