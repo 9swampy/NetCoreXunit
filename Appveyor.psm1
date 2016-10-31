@@ -5,11 +5,17 @@ function Invoke-AppVeyorTest
     
     $result = "true"
     Get-ChildItem NetCoreXunit* -Recurse -Directory | % { 
-        $output = & dotnet test $_.FullName
+        $test_path = $_.FullName
+        $output = & dotnet test $test_path
         if ($output -notcontains "Failed: 0.")
         {
+            Write-Output "Located failed tests in $test_path"
             $result = "false"
-        }   
+        }
+        else
+        {
+            Write-Output "All tests passed in $test_path"
+        }  
     }
     if ($result -eq "false")
     {
