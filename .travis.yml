@@ -22,8 +22,8 @@ addons:
     - libicu52
     - dbus
 
-#os:
-#  - linux
+os:
+  - linux
 #  - osx
 
 before_install:
