@@ -1,4 +1,5 @@
-language: generic
+language: csharp
+solution: NetCoreXunit.sln
 
 python:
   - "2.7"
@@ -23,11 +24,16 @@ matrix:
       mono: none
       env: DOTNETCORE=1
     - os: linux
-      sudo: required
       dist: trusty
+      sudo: required
       dotnet: 1.0.0-preview2-003121
       mono: none
       env: DOTNETCORE=1
+	  
+notifications:
+  email:
+    on_success: change
+    on_failure: always
 
 script:
   - which dotnet;
