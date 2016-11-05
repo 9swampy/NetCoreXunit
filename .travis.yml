@@ -1,5 +1,10 @@
 language: csharp
 solution: NetCoreXunit.sln
+sudo: required  
+dist: trusty  
+dotnet: 1.0.0-preview2-003121
+env: DOTNETCORE=1
+mono: none
 
 python:
   - "2.7"
@@ -20,13 +25,7 @@ matrix:
   include:
     - os: osx
       osx_image: xcode7.1
-      mono: none
-      dotnet: 1.0.0-preview2-003121
     - os: linux
-      dist: trusty
-      sudo: required
-      mono: none
-      dotnet: 1.0.0-preview2-003121
 
 notifications:
   email:
