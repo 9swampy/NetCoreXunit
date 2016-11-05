@@ -22,9 +22,9 @@ addons:
     - libicu52
     - dbus
 
-os:
-  - linux
-  - osx
+#os:
+#  - linux
+#  - osx
 
 before_install:
   - if test "$TRAVIS_OS_NAME" == "osx"; then
