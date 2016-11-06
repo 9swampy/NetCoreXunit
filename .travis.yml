@@ -1,6 +1,13 @@
 language: csharp
 solution: NetCoreXunit.sln
 
+#dotnet cli require Ubuntu 14.04
+sudo: required
+dist: trusty
+
+#dotnet cli require OSX 10.11 - 10.10 wouldn't build but 10.11 required the crypto fix in before_install
+osx_image: xcode7.3
+
 dotnet: 1.0.0-preview2-003121
 env: DOTNETCORE=1
 mono: none
@@ -20,13 +27,9 @@ addons:
     - libicu52
     - dbus
 
-matrix:
-  include:
-    - os: osx
-      osx_image: xcode7.3
-    - os: linux
-      sudo: required
-      dist: trusty
+os: 
+    - linux
+    - osx
 
 notifications:
   email:
