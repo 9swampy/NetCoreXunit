@@ -1,13 +1,6 @@
 language: csharp
 solution: NetCoreXunit.sln
 
-#dotnet cli require Ubuntu 14.04
-sudo: required
-dist: trusty
-
-#dotnet cli require OSX 10.10
-osx_image: xcode7.3
-
 dotnet: 1.0.0-preview2-003121
 env: DOTNETCORE=1
 mono: none
@@ -30,6 +23,14 @@ addons:
 os: 
     - linux
     - osx
+
+matrix:
+  include:
+    - os: osx
+      osx_image: xcode7.3
+    - os: linux
+      sudo: required
+      dist: trusty
 
 notifications:
   email:
