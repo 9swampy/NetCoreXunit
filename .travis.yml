@@ -15,7 +15,9 @@ mono: none
 python:
   - "2.7"
   
-apt: packages:
+addons:
+  apt:
+    packages:
   - gettext
   - libcurl4-openssl-dev
   - libicu-dev
