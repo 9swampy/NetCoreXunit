@@ -15,18 +15,6 @@ mono: none
 python:
   - "2.7"
 
-addons:
-  apt:
-    packages:
-    - gettext
-    - libcurl4-openssl-dev
-    - libicu-dev
-    - libssl-dev
-    - libunwind8
-    - zlib1g
-    - libicu52
-    - dbus
-
 os: 
     - linux
     - osx
