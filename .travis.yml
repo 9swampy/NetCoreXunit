@@ -20,10 +20,6 @@ addons:
     - libicu52
     - dbus
 
-os: 
-    - linux
-    - osx
-
 matrix:
   include:
     - os: osx
